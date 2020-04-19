@@ -1,78 +1,64 @@
 <!DOCTYPE html>
-
-<a-entity position="-0.5 0.5 -0.5" scale="0.6 1.2 1" text-geometry="value: VAPORWAVE; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color:pink; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
-
-        <a-entity position="1 0 0.3" text-geometry="value: Aesthetic; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0;"
-                  material="shader: flat; color: white"></a-entity>
-        <a-entity position="1 0 0.3" text-geometry="value: Aesthetic; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0; bevelEnabled: true; bevelSize: 0.04; bevelThickness: 0.04; curveSegments: 1"
-                  material="shader: flat; color: white; transparent: true; opacity: 0.4"></a-entity>
-      </a-entity>
-<html lang="en">
-  <head>
-    <title>Vaporwave - A-Frame </title>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <meta name="description" content="Vaporwave aesthetic text By Ada Rose Edwards (@lady_ada_king).">
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <title>24 ways</title>
+    <script src="https://aframe.io/releases/0.8.0/aframe.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v2.6.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
     <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
- <script src="https://rawgit.com/ngokevin/aframe-particle-system-component/d58edfe4e8f84a04eeb50c4e4cebf081d4e26e2d/dist/aframe-particle-system-component.min.js"></script>
- <script src="https://rawgit.com/donmccurdy/aframe-extras/3bdbbb7405ba10dda3e00977d795546a53be4b5d/dist/aframe-extras.loaders.min.js"></script>
- <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-  </head>
-  <body>
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Party Website</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="hello1.html">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Party Website</a>
   </div>
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="hello1.html">Dogum Gunu Sarkisi!</a></li>
+    <li><a href="#">Page 2</a></li>
+    <li><a href="#">Page 3</a></li>
+  </ul>
+</div>
 </nav>
-    <a-scene>
-      <a-assets>
-        <img id="pink" src="https://img.gs/bbdkhfbzkk/stretch/http://i.imgur.com/1hyyIUi.jpg" crossorigin="anonymous" />
-        <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous">
-        <img src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" id="chrome" crossorigin="anonymous">
-        <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://i.imgur.com/WqlqEkq.jpg" crossorigin="anonymous" />
-        <a-asset-item id="dawningFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2FdawningOfANewDayRegular.typeface.json?1490305922844"></a-asset-item>
+  <a-scene>
+    <a-assets>
+      <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+              <a-asset-item id="dawningFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2FdawningOfANewDayRegular.typeface.json?1490305922844"></a-asset-item>
         <a-asset-item id="exoFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2Black.typeface.json?1490305922150"></a-asset-item>
         <a-asset-item id="exoItalicFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2BlackItalic.typeface.json?1490305922725"></a-asset-item>
-      </a-assets>
+    </a-assets>
 
-      <a-entity scale="2 2 2" geometry="primitive: torusKnot" position="0 6 -10" material="color: magenta; metalness:1; roughness: 0.1; sphericalEnvMap: #sky;">
-        <a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite"></a-animation>
-      </a-entity>
+    <a-entity id="player"
+              camera
+              universal-controls
+              position="0 4 0">
+    </a-entity>
 
-      <a-entity position="-3 1 -6" rotation="5 0 0">
-        <a-entity
-          rotation="0 0 5"
-          position="0 2 0.2"
-          text-geometry="value: Iyi ki Dogdun Elvan!; font: #dawningFont; bevelEnabled: true; bevelSize: 0.05; bevelThickness: 0.05; curveSegments: 12; size: 1; height: 0;"
-          material="color:lavenderblush; metalness:1; roughness: 0; sphericalEnvMap: #pink;"
-        ></a-entity>
+    <!--Set the environment -->
+    <a-entity environment="preset: goaland; groundColor:  #8F68F5; ground: spikes; groundYScale: 3; dressingColor: #FFF1C3; horizonColor: #FEC9CB; skyColor: #FEFDC9; dressingAmount:100"></a-entity>
+    <!-- unicorn mdel-->
+    <a-gltf-model src="https://L1birthday.github.io/assets/unicorn/scene.gltf" scale="0.1 0.5 0.5" rotation="0 90 0" position="-9 5 -2"></a-gltf-model>
+    <!-- birthday text -->
+    <a-entity text-geometry="value: Happy Birthday Elvan!; font: #exoItalicFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.5; size:5; height: 1" material="color: #4FC8ED;" position="0 5 0"></a-entity>
+    <!--cake -->
+    <a-gltf-model src="https://L1birthday.github.io/assets/cake/scene.gltf" scale="0.8 0.8 0.8" rotation="0 90 0" position="72 0 10"  animation-mixer="loop:repeat"></a-gltf-model>
 
-      <a-entity
-        geometry="primitive: plane; width: 10000; height: 10000;" rotation="-90 0 0"
-        material="src: #grid; repeat: 10000 10000; transparent: true;metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky;"></a-entity>
+    <!--disco -->
+    <a-gltf-model src="https://L1birthday.github.io/assets/disco_ball/scene.gltf" scale="0.05 0.05 0.05" rotation="0 90 0" position="0 15 10"  animation-mixer="loop:repeat"></a-gltf-model>
 
-        <!---a-entity position="0 0 -5" geometry="primitive: torus; radius: 5; radiusTubular: 0.5; arc: 180";   material="color:lavenderblush; metalness:10; roughness: 0; sphericalEnvMap: #pink;"></a-entity-->
-        <!---a-entity ply-model="src: https://ucarecdn.com/c2d8adc1-47c8-4c32-83b1-d1369fde79bc/" position="7 -4 -25" scale=".8 .8 .8" rotation="-90 0 0"></a-entity--->
-      <a-entity gltf-model="https://L1birthday.github.io/assets/unicorn/scene.gltf" scale="5 5 5" position="2 1 -1"></a-entity>
-      <a-gltf-model src="https://brianchirls.github.io/aframe-test/assets/wolf_link/scene.gltf
-" scale="0.002 0.002 0.002" position="0.5 1 -2"></a-gltf-model>
+    <!-- harry potter ball-->
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+      <a-entity gltf-model="https://L1birthday.github.io/assets/golden_snitch/scene.gltf" scale="0.01 0.01 0.01" rotation="0 90 0" position="0 10 20"  animation-mixer="loop:repeat"></a-entity>
+    </a-entity>
 
-      <a-entity light="color: #ccccff; intensity: 1; type: ambient;" visible=""></a-entity>
-      <a-entity light="color: ffaaff; intensity: 1.5" position="5 5 5"></a-entity>
-      <a-entity light="color: white; intensity: 0.5" position="-5 5 15"></a-entity>
-      <a-entity light="color: white; type: ambient;"></a-entity>
 
-      <a-sky src="#sky" rotation="0 -90 0"></a-sky>
-    </a-scene>
-  </body>
+
+</a-scene>
+</body>
 </html>
