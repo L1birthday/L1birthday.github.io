@@ -29,37 +29,38 @@
       </ul>
     </div>
   </nav>
-  <a-scene>
-    <a-assets>
-      <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
-              <a-asset-item id="dawningFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2FdawningOfANewDayRegular.typeface.json?1490305922844"></a-asset-item>
-        <a-asset-item id="exoFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2Black.typeface.json?1490305922150"></a-asset-item>
-        <a-asset-item id="exoItalicFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2BlackItalic.typeface.json?1490305922725"></a-asset-item>
-    </a-assets>
+  <div>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+                <a-asset-item id="dawningFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2FdawningOfANewDayRegular.typeface.json?1490305922844"></a-asset-item>
+          <a-asset-item id="exoFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2Black.typeface.json?1490305922150"></a-asset-item>
+          <a-asset-item id="exoItalicFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2BlackItalic.typeface.json?1490305922725"></a-asset-item>
+      </a-assets>
 
-    <a-entity id="player"
-              camera
-              universal-controls
-              position="0 4 0">
-    </a-entity>
+      <a-entity id="player"
+                camera
+                universal-controls
+                position="0 4 0">
+      </a-entity>
 
-    <!--Set the environment -->
-    <a-entity environment="preset: goaland; groundColor:  #8F68F5; ground: spikes; groundYScale: 3; dressingColor: #FFF1C3; horizonColor: #FEC9CB; skyColor: #FEFDC9; dressingAmount:100"></a-entity>
-    <!-- unicorn mdel-->
-    <a-gltf-model src="https://L1birthday.github.io/assets/unicorn/scene.gltf" scale="0.1 0.5 0.5" rotation="0 90 0" position="-9 5 -2"></a-gltf-model>
-    <!-- birthday text -->
-    <a-entity text-geometry="value: Happy Birthday Elvan!; font: #exoItalicFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.5; size:5; height: 1" material="color: #4FC8ED;" position="0 5 0"></a-entity>
-    <!--cake -->
-    <a-gltf-model src="https://L1birthday.github.io/assets/cake/scene.gltf" scale="0.8 0.8 0.8" rotation="0 90 0" position="72 0 10"  animation-mixer="loop:repeat"></a-gltf-model>
+      <!--Set the environment -->
+      <a-entity environment="preset: goaland; groundColor:  #8F68F5; ground: spikes; groundYScale: 3; dressingColor: #FFF1C3; horizonColor: #FEC9CB; skyColor: #FEFDC9; dressingAmount:100"></a-entity>
+      <!-- unicorn mdel-->
+      <a-gltf-model src="https://L1birthday.github.io/assets/unicorn/scene.gltf" scale="0.1 0.5 0.5" rotation="0 90 0" position="-9 5 -2"></a-gltf-model>
+      <!-- birthday text -->
+      <a-entity text-geometry="value: Happy Birthday Elvan!; font: #exoItalicFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.5; size:5; height: 1" material="color: #4FC8ED;" position="0 5 0"></a-entity>
+      <!--cake -->
+      <a-gltf-model src="https://L1birthday.github.io/assets/cake/scene.gltf" scale="0.8 0.8 0.8" rotation="0 90 0" position="72 0 10"  animation-mixer="loop:repeat"></a-gltf-model>
 
-    <!--disco -->
-    <a-gltf-model src="https://L1birthday.github.io/assets/disco_ball/scene.gltf" scale="0.05 0.05 0.05" rotation="0 90 0" position="0 15 10"  animation-mixer="loop:repeat"></a-gltf-model>
+      <!--disco -->
+      <a-gltf-model src="https://L1birthday.github.io/assets/disco_ball/scene.gltf" scale="0.05 0.05 0.05" rotation="0 90 0" position="0 15 10"  animation-mixer="loop:repeat"></a-gltf-model>
 
-    <!-- harry potter ball-->
-    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
-      <a-entity gltf-model="https://L1birthday.github.io/assets/golden_snitch/scene.gltf" scale="0.01 0.01 0.01" rotation="0 90 0" position="0 10 20"  animation-mixer="loop:repeat"></a-entity>
-    </a-entity>
-
+      <!-- harry potter ball-->
+      <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+        <a-entity gltf-model="https://L1birthday.github.io/assets/golden_snitch/scene.gltf" scale="0.01 0.01 0.01" rotation="0 90 0" position="0 10 20"  animation-mixer="loop:repeat"></a-entity>
+      </a-entity>
+  </div>
 
 
 </a-scene>
